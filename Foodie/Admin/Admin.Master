@@ -31,6 +31,7 @@
       <!-- Style.css -->
       <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
       <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
+    <script type="text/javascript" src="../assets/js/jquery/jquery.min.js"></script>
 
     <script>
 
@@ -152,7 +153,7 @@
 
                             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Overview</div>
                             <ul class="pcoded-item pcoded-left-item">
-                                <li class="active">
+                                <li>
                                     <a href="Dashboard.aspx">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
@@ -164,7 +165,7 @@
                             <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Category Crud</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li>
-                                    <a href="form-elements-component.html">
+                                    <a href="Category.aspx">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Categories</span>
                                         <span class="pcoded-mcaret"></span>
@@ -269,7 +270,7 @@
 
 
     <!-- Required Jquery -->
-<script type="text/javascript" src="../assets/js/jquery/jquery.min.js"></script>
+<%--<script type="text/javascript" src="../assets/js/jquery/jquery.min.js"></script>--%>
 <script type="text/javascript" src="../assets/js/jquery-ui/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../assets/js/popper.js/popper.min.js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap/js/bootstrap.min.js"></script>
