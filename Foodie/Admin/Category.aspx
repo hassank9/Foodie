@@ -84,32 +84,45 @@
                                             <h4 class="sub-title">Category Lists</h4>
                                             <div class="card-block table-border-style">
                                                 <div class="table-responsive ">
-                                                    <asp:Repeater ID="rCategory" runat="server">
+                                                    <asp:Repeater ID="rCategory" runat="server" OnItemCommand="rCategory_ItemCommand" OnItemDataBound="rCategory_ItemDataBound">
                                                         <HeaderTemplate>
-                                                            <table class="table data-table-export table-hover nowarp">
+                                                            <table class="table data-table-export table-hover nowrap">
                                                                 <thead>
                                                                 <tr>
                                                                     <th class="table-plus">Name</th>
                                                                     <th>Image</th>
                                                                     <th>IsAction</th>
                                                                     <th>CreatedDate</th>
-                                                                    <th class="dataTable-nosort">Action</th>
-                                                                </tr>
-                                                            </thead>
+                                                                    <th class="datatable-nosort">Action</th>
+                                                               </thead>
                                                                 <tbody>
                                                         </HeaderTemplate>
                                                         <ItemTemplate>
                                                             <tr>
-                                                                <td class="table-plus"><%#Eval("Name") %></td>
+                                                                <td><%#Eval("Name") %></td>
                                                                 <td>
-                                                                    <img alt="" width="40" src="<%# Utils.GetImageUrl(Eval("ImageUrl"))%>" />
+                                                                    <img alt="" width="50" src="<%# Utils.GetImageUrl(Eval("ImageUrl")) %>" />
                                                                 </td>
-                                                                <td><%#Eval("IsActive") %></td>
+                                                                <td>
+                                                                    <asp:Label ID="lblIsActive" runat="server" Text='<%#Eval("IsActive") %>'></asp:Label>
+                                                                </td>
                                                                 <td><%#Eval("CreatedDate") %></td>
+                                                                <td>
+
+                                                                    <asp:LinkButton ID="lnkEdit" Text="Edit" runat="server" CssClass="badge badge-primary"
+                                                                        CommandArgument='<%# Eval("CategoryId") %>' CommandName="edit" >
+                                                                        <i class="ti-pincil"></i>
+                                                                    </asp:LinkButton>
+                                                                    <asp:LinkButton ID="lnkDelete" Text="Delete" runat="server" CssClass="badge bg-danger"
+                                                                        CommandArgument='<%# Eval("CategoryId") %>' CommandName="delete" OnClientClick="return confirm ('Do you want to delete this Category ?');" >
+                                                                        <i class="ti-trash"></i>
+                                                                    </asp:LinkButton>
+
+                                                                </td>
                                                             </tr>
                                                         </ItemTemplate>
                                                         <FooterTemplate>
-                                                           </tbody>
+                                                            </tbody>
                                                             </table>
                                                         </FooterTemplate>
                                                     </asp:Repeater>
