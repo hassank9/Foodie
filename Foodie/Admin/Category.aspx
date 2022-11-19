@@ -30,7 +30,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="pcoded-inner-content" pt-0>
+    <div class="pcoded-inner-content">
 
         <div class="align-align-self-end">
             <asp:Label ID="lblMsg" runat="server" Visible="false"></asp:Label>
@@ -109,12 +109,13 @@
                                                                 <td><%#Eval("CreatedDate") %></td>
                                                                 <td>
 
-                                                                    <asp:LinkButton ID="lnkEdit" Text="Edit" runat="server" CssClass="badge badge-primary"
-                                                                        CommandArgument='<%# Eval("CategoryId") %>' CommandName="edit" >
-                                                                        <i class="ti-pincil"></i>
+                                                                    <asp:LinkButton ID="lnkEdit" Text="Edit" runat="server" CssClass="badge badge-primary" 
+                                                                        CommandArgument='<%# Eval("CategoryId") %>' CommandName="edit">
+                                                                        <i class="ti-pencil"></i>
                                                                     </asp:LinkButton>
-                                                                    <asp:LinkButton ID="lnkDelete" Text="Delete" runat="server" CssClass="badge bg-danger"
-                                                                        CommandArgument='<%# Eval("CategoryId") %>' CommandName="delete" OnClientClick="return confirm ('Do you want to delete this Category ?');" >
+                                                                    <asp:LinkButton ID="lnkDelete" Text="Delete" runat="server" CommandName="delete" 
+                                                                        CssClass="badge bg-danger" CommandArgument='<%# Eval("CategoryId") %>'
+                                                                        OnClientClick="return confirm('Do you want to delete this category?');"> 
                                                                         <i class="ti-trash"></i>
                                                                     </asp:LinkButton>
 
