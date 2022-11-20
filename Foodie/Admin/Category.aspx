@@ -11,7 +11,6 @@
             }, seconds * 1000);
         };
     </script>
-
     <script>
         function ImagePreview(input) {
             if (input.files && input.files[0]) {
