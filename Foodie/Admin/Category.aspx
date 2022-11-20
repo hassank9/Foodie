@@ -54,7 +54,7 @@
                                                 <div class="form-group">
                                                     <label>Category Name</label>
                                                     <div>
-                                                        <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter Category Name" required></asp:TextBox>
+                                                        <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter Category Name"></asp:TextBox>
                                                         <asp:HiddenField ID="hdnId" runat="server" Value="0" />
                                                     </div>
                                                 </div>
